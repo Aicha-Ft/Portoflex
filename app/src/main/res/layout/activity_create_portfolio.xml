@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="24dp"
+    android:background="#F7F7F7"
+    android:gravity="center_vertical">
 
+    <!-- Titre du portfolio -->
     <EditText
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Portfolio Title"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:gravity="start|top"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:drawablePadding="8dp" />
 
+    <!-- Description du portfolio -->
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="match_parent"
@@ -19,13 +34,30 @@
         android:hint="Description"
         android:inputType="textMultiLine"
         android:textSize="16sp"
-        android:minHeight="120dp" />
+        android:textColor="#333333"
+        android:minHeight="120dp"
+        android:layout_marginBottom="32dp"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:gravity="start|top"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:drawableLeft="@android:drawable/ic_input_get"
+        android:drawablePadding="8dp" />
 
-    <Button
+    <!-- Bouton pour créer le portfolio -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonCreatePortfolio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Portfolio"
-        android:layout_gravity="center" />
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6200EE"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        app:cornerRadius="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
 
 </LinearLayout>

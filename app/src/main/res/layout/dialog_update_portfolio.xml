@@ -2,25 +2,48 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#F0F4F8">
 
+    <!-- Champ pour le titre -->
     <EditText
         android:id="@+id/et_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Titre du portfolio"
-        android:textSize="16sp" />
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp" />
 
+    <!-- Champ pour la description -->
     <EditText
         android:id="@+id/et_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Description du portfolio"
-        android:inputType="textMultiLine"
-        android:minHeight="100dp"
-        android:gravity="top"
+        android:padding="12dp"
         android:textSize="16sp"
-        android:layout_marginTop="8dp" />
+        android:minHeight="120dp"
+        android:background="@android:drawable/edit_text"
+        android:gravity="top"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp" />
+
+    <!-- Bouton Mettre à jour -->
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mettre à jour"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="#6200EE"
+        android:textStyle="bold"
+        android:elevation="4dp" />
 </LinearLayout>

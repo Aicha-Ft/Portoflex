@@ -1,18 +1,33 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
 
+    <!-- Bouton Créer un Portfolio -->
     <Button
         android:id="@+id/buttonAddPortfolio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Créer un Portfolio" />
+        android:text="Créer un Portfolio"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6200EE"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center" />
 
+    <!-- RecyclerView pour afficher les portfolios -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewPortfolios"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:layout_marginTop="16dp" />
+
 </LinearLayout>

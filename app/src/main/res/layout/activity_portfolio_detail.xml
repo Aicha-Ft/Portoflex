@@ -1,40 +1,57 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
 
+    <!-- Titre de la page -->
     <TextView
         android:id="@+id/editProjectTitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nom du Portfolio"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
         android:gravity="center"
-        android:paddingBottom="8dp"
-        android:textStyle="bold" />
+        android:layout_marginBottom="24dp" />
 
+    <!-- Bouton Ajouter un Projet -->
     <Button
         android:id="@+id/btnAddProject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajouter un Projet" />
+        android:text="Ajouter un Projet"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6200EE"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:layout_gravity="center" />
 
-    <!-- Déclarez votre ListView pour afficher les projets -->
+    <!-- RecyclerView pour afficher les projets -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProjects"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:clipToPadding="false"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Bouton Supprimer le Portfolio -->
     <Button
         android:id="@+id/btnDeletePortfolio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Supprimer le Portfolio"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="8dp" />
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D32F2F"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_gravity="center" />
+
 </LinearLayout>

@@ -1,51 +1,110 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- En-tête avec le logo et le titre -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        tools:ignore="ExtraText">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/ic_launcher_foreground"
+            app:srcCompat="@drawable/port" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="PORTOFLEX"
+            android:textColor="#E0BD27"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
 
     <!-- Section Connexion -->
     <LinearLayout
         android:id="@+id/loginSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#F5F5F5"
+        android:elevation="4dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_gravity="center">
 
         <EditText
             android:id="@+id/emailInputLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp" />
 
         <EditText
             android:id="@+id/passwordInputLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mot de passe"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Se connecter" />
+            android:text="Se connecter"
+            android:background="#003366"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
 
         <TextView
             android:id="@+id/switchToRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Créer un compte"
-            android:paddingTop="16dp" />
+            android:textColor="#003366"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <!-- Section Inscription -->
     <LinearLayout
+        android:background="#F5F5F5"
+        android:elevation="4dp"
         android:id="@+id/registerSection"
-        android:layout_width="match_parent"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         android:visibility="gone">
 
         <EditText
@@ -53,27 +112,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp" />
 
         <EditText
             android:id="@+id/passwordInputRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mot de passe"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Créer un compte" />
+            android:text="Créer un compte"
+            android:background="#003366"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
 
         <TextView
             android:id="@+id/switchToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Déjà un compte ? Se connecter"
-            android:paddingTop="16dp" />
+            android:textColor="#003366"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

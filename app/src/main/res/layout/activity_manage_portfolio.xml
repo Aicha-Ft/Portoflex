@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
 
     <!-- Champ pour le titre -->
     <EditText
@@ -12,7 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Titre du portfolio"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:layout_gravity="center"
+        android:textColor="#333333"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:drawablePadding="8dp" />
 
     <!-- Champ pour la description -->
     <EditText
@@ -21,10 +29,13 @@
         android:layout_height="wrap_content"
         android:hint="Description du portfolio"
         android:inputType="textMultiLine"
-        android:minHeight="100dp"
-        android:gravity="top"
         android:textSize="16sp"
-        android:layout_marginTop="8dp" />
+        android:padding="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/white"
+        android:gravity="top|start"
+        android:layout_gravity="center"
+        android:textColor="#333333" />
 
     <!-- Bouton pour mettre à jour -->
     <Button
@@ -32,9 +43,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mettre à jour"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/holo_blue_light"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:background="#6200EE"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center" />
 
     <!-- Bouton pour supprimer -->
     <Button
@@ -42,8 +56,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Supprimer"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/holo_red_light"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:background="#D32F2F"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_gravity="center" />
 
 </LinearLayout>
